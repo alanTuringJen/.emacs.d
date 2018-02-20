@@ -12,3 +12,6 @@
 (require 'init-better-default)
 (require 'init-ui)
 (require 'init-shortcut-key)
+
+(setq python-shell-interpreter "ipython"
+     python-shell-interpreter-args "--simple-prompt -i")
