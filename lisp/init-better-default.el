@@ -7,8 +7,4 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;; 将光标移动到新创建的窗口中
-(require 'popwin)
-(popwin-mode 1)
-
 (provide 'init-better-default)

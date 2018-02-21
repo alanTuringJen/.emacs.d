@@ -1,4 +1,4 @@
-;; 配置插件源
+;; Package configuration
 (when (>= emacs-major-version 24)
     (require 'package)
     (package-initialize)
@@ -12,13 +12,11 @@
 
 ;; Add Packages
 (defvar my/packages '(
-		;; --- Auto-completion ---
 		company
-		popwin
-		;; --- Themes ---
-		solarized-theme
+		swiper
+		counsel
+		spacemacs-theme
 		) "Default packages")
-
 (setq package-selected-packages my/packages)
 
 (defun my/packages-installed-p ()
@@ -33,6 +31,19 @@
         (when (not (package-installed-p pkg))
 	  (package-install pkg))))
 
+;; Theme configuration
+(load-theme 'spacemacs-dark t)
+
+;; Swiper configuration
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+
+;; Auto-complete configuration
 (global-company-mode 1)
 
 (provide 'init-packages)
