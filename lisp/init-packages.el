@@ -12,14 +12,14 @@
 
 ;; Add Packages
 (defvar my/packages '(
-		company
-		swiper
-		counsel
-		zenburn-theme
-		leuven-theme
-		smartparens
-		popwin
-		) "Default packages")
+		      company
+		      which-key
+		      swiper
+		      counsel
+		      zenburn-theme
+		      smartparens
+		      popwin
+		      ) "Default packages")
 (setq package-selected-packages my/packages)
 
 (defun my/packages-installed-p ()
@@ -56,8 +56,11 @@
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
-;; Auto-complete configuration
+;; Auto-completation configuration
 (global-company-mode 1)
 
+;; Which-key configuration
+(require 'which-key)
+(which-key-mode)
 
 (provide 'init-packages)
