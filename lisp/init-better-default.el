@@ -1,10 +1,10 @@
-(setq auto-save-default nil) ;; 关闭自动保存文件
-(global-auto-revert-mode t) ;; 自动加载外部修改过的文件
+(setq auto-save-default nil)
+(global-auto-revert-mode t)
 (global-linum-mode t)
-(setq make-backup-files nil) ;; 关闭自动备份文件
+(setq make-backup-files nil)
 (delete-selection-mode t)
-(setq ring-bell-function 'ignore) ;;关闭警告音
+(setq ring-bell-function 'ignore) ;; 关闭提示音
 (fset 'yes-or-no-p 'y-or-n-p)
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (provide 'init-better-default)

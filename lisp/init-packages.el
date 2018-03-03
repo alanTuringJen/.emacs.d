@@ -3,7 +3,7 @@
     (require 'package)
     (package-initialize)
     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-	      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+                           ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个ELPA镜像
 
@@ -17,8 +17,10 @@
 		      swiper
 		      counsel
 		      zenburn-theme
+			  monokai-theme
 		      smartparens
 		      popwin
+			  hungry-delete
 		      ) "Default packages")
 (setq package-selected-packages my/packages)
 
@@ -37,6 +39,7 @@
 
 ;; Theme configuration
 (load-theme 'zenburn t)
+;; (load-theme 'monokai t)
 
 ;; Smartparens configuration
 (require 'smartparens-config)
@@ -62,5 +65,9 @@
 ;; Which-key configuration
 (require 'which-key)
 (which-key-mode)
+
+;; Hungry-delete configuration
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 
 (provide 'init-packages)
