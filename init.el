@@ -34,7 +34,7 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-	(company which-key swiper counsel zenburn-theme smartparens popwin hungry-delete)))
+	(company which-key swiper counsel smartparens popwin hungry-delete)))
  '(which-key-idle-delay 0.15)
  '(word-wrap nil))
 (custom-set-faces
