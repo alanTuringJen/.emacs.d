@@ -5,6 +5,6 @@
 (delete-selection-mode t)
 (setq ring-bell-function 'ignore) ;; 关闭提示音
 (fset 'yes-or-no-p 'y-or-n-p)
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (provide 'init-better-default)
